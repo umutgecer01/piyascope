@@ -1,0 +1,1 @@
+var e={async analyze(e){let t=await fetch(`/api/ai/analyze`,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(e)}),n=await t.json();if(!t.ok)throw Error(n.error||`Analiz servisi ${t.status} yanıtı verdi.`);return n}};export{e as t};
