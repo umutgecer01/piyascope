@@ -1,7 +1,7 @@
 [build]
 command = "npm run build"
 publish = "dist/client"
-functions = "netlify/functions"
+ignore = "git log --oneline -1 | grep -q deploy || exit 1"
 
 [[redirects]]
 from = "/*"
@@ -12,3 +12,8 @@ status = 200
 for = "/assets/*"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+optional = true
+skip = true
