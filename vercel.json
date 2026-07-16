@@ -1,5 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
-  "framework": "vite"
+  "outputDirectory": ".",
+  "installCommand": "npm ci",
+  "public": "dist/client"
 }
